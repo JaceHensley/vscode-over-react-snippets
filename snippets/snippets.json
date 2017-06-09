@@ -1,0 +1,120 @@
+{
+  "statelessComponents": {
+    "prefix": "orStless",
+    "body": [
+      "@Factory()",
+      "UiFactory<${1:MyComponent}Props> ${1:MyComponent};",
+      "",
+      "@Props()",
+      "class ${1:MyComponent}Props extends UiProps {",
+      "",
+      "}",
+      "",
+      "@Component()",
+      "class ${1:MyComponent}Component extends UiComponent<${1:MyComponent}Props> {",
+      "\t@override",
+      "\tMap getDefaultProps() => (newProps());",
+      "",
+      "\t@override",
+      "\trender() { }",
+      "}"
+    ],
+    "description": "Creates a stateless OverReact component"
+  },
+  "abstractStatelessComponents": {
+    "prefix": "orAbsStless",
+    "body": [
+      "@AbstractProps()",
+      "abstract class ${1:MyComponent}Props extends UiProps {",
+      "",
+      "}",
+      "",
+      "@AbstractComponent()",
+      "abstract class ${1:MyComponent}Component<T extends ${1:MyComponent}Props> extends UiComponent<T> {",
+      "\t@override",
+      "\tMap getDefaultProps() => (newProps());",
+      "",
+      "\t@override",
+      "\trender() { }",
+      "}"
+    ],
+    "description": "Creates an abstract stateless OverReact component"
+  },
+  "statefulComponents": {
+    "prefix": "orStful",
+    "body": [
+      "@Factory()",
+      "UiFactory<${1:MyComponent}Props> ${1:MyComponent};",
+      "",
+      "@Props()",
+      "class ${1:MyComponent}Props extends UiProps {",
+      "",
+      "}",
+      "",
+      "@State()",
+      "class ${1:MyComponent}State extends UiState {",
+      "",
+      "}",
+      "",
+      "@Component()",
+      "class ${1:MyComponent}Component extends UiStatefulComponent<${1:MyComponent}Props, ${1:MyComponent}State> {",
+      "\t@override",
+      "\tMap getDefaultProps() => (newProps());",
+      "",
+      "\t@override",
+      "\tMap getInitialState() => (newState());",
+      "",
+      "\t@override",
+      "\trender() { }",
+      "}"
+    ],
+    "description": "Creates a stateful OverReact component"
+  },
+  "abstractStatefulComponents": {
+    "prefix": "orAbsStful",
+    "body": [
+      "@AbstractProps()",
+      "abstract class ${1:MyComponent}Props extends UiProps {",
+      "",
+      "}",
+      "",
+      "@AbstractState()",
+      "abstract class ${1:MyComponent}State extends UiState {",
+      "",
+      "}",
+      "",
+      "@AbstractComponent()",
+      "abstract class ${1:MyComponent}Component<T extends ${1:MyComponent}Props, S extends ${1:MyComponent}State> extends UiStatefulComponent<T, S> {",
+      "\t@override",
+      "\tMap getDefaultProps() => (newProps());",
+      "",
+      "\t@override",
+      "\tMap getInitialState() => (newState());",
+      "",
+      "\t@override",
+      "\trender() { }",
+      "}"
+    ],
+    "description": "Creates an abstract stateful OverReact component"
+  },
+  "propMixins": {
+    "prefix": "orMixin",
+    "body": [
+      "@PropsMixin()",
+      "abstract class ${1:MyComponent}PropsMixin {",
+      "\tstatic final ${1:MyComponent}PropsMixinMapView defaultProps = new ${1:MyComponent}PropsMixinMapView({});",
+      "",
+      "\tMap get props;",
+      "}",
+      "",
+      "class ${1:MyComponent}PropsMixinMapView extends MapView with ${1:MyComponent}PropsMixin {",
+      "\t/// The props to be manipulated via the getters/setters.",
+      "\t///",
+      "\t/// In this case, it's the current MapView object",
+      "\t@override",
+      "\tMap get props => this;",
+      "}"
+    ],
+    "description": "Creates an abstract stateful OverReact component"
+  }
+}
