@@ -1,6 +1,10 @@
 # VS Code OverReact Snippets
 -------------------
 
+[![Version](http://vsmarketplacebadge.apphb.com/version/JaceHensley.over-react-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=JaceHensley.over-react-snippets)
+[![Installs](http://vsmarketplacebadge.apphb.com/installs/JaceHensley.over-react-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=JaceHensley.over-react-snippets)
+[![Ratings](https://vsmarketplacebadge.apphb.com/rating/JaceHensley.over-react-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=JaceHensley.over-react-snippets)
+
 This extension contains code snippets for [OverReact][over_react].
 
 ## Installation
