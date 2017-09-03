@@ -277,12 +277,8 @@
       "\tMap get props;",
       "}",
       "",
-      "class ${1:MyComponent}PropsMixinMapView extends MapView with ${1:MyComponent}PropsMixin {",
-      "\t/// The props to be manipulated via the getters/setters.",
-      "\t///",
-      "\t/// In this case, it's the current MapView object",
-      "\t@override",
-      "\tMap get props => this;",
+      "class ${1:MyComponent}PropsMixinMapView extends UiPropsMixinMapView with ${1:MyComponent}PropsMixin {",
+      "\t${1:MyComponent}PropsMixinMapView(Map map) : super(map);",
       "}"
     ],
     "description": "Creates an abstract stateful OverReact component"
@@ -290,6 +286,7 @@
   "componentWillMount": {
     "prefix": "orWM",
     "body": [
+      "@mustCallSuper",
       "@override",
       "void componentWillMount() {",
       "\tsuper.componentWillMount()",
@@ -309,6 +306,7 @@
   "componentWillReceiveProps": {
     "prefix": "orWRP",
     "body": [
+      "@mustCallSuper",
       "@override",
       "void componentWillReceiveProps(Map nextProps) {",
       "\tsuper.componentWillReceiveProps(nextProps)",
@@ -344,8 +342,12 @@
   "componentWillUnmount": {
     "prefix": "orWUn",
     "body": [
+      "@mustCallSuper",
       "@override",
-      "void componentWillUnmount() { }"
+      "void componentWillUnmount() {",
+      "\tsuper.componentWillUnmount()",
+      "",
+      "}"
     ],
     "description": "componentWillUnmount method"
   },
