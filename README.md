@@ -21,6 +21,16 @@ Below is a list of all available snippets and the triggers of each one..
 
 | Trigger  | Content |
 | -------: | ------- |
+| `orStlessDart2`   | dart 2 stateless component skeleton |
+| `orCStlessDart2`   | dart 2 commented stateless component skeleton |
+| `orAbsStlessDart2`  | dart 2 abstract stateless component skeleton |
+| `orCAbsStlessDart2`  | dart 2 commented abstract stateless component skeleton |
+| `orStfulDart2`   | dart 2 stateful component skeleton |
+| `orCStfulDart2`   | dart 2 commneted stateful component skeleton |
+| `orAbsStfulDart2`  | dart 2 abstract stateful component skeleton |
+| `orCAbsStfulDart2`  | dart 2 commented abstract stateful component skeleton |
+| `orPropsMixinDart2`  | dart 2 prop mixin skeleton |
+| `orStateMixinDart2`  | dart 2 state mixin skeleton |
 | `orStless`   | stateless component skeleton |
 | `orCStless`   | commented stateless component skeleton |
 | `orAbsStless`  | abstract stateless component skeleton |
